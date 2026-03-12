@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Erick Alcántara</title>
+<title>Izcalli Heat</title>
 
 <style>
+
 body{
 margin:0;
 background:black;
@@ -14,40 +15,36 @@ align-items:center;
 height:100vh;
 }
 
-.container{
-position:relative;
-}
-
 img{
 max-width:100vw;
 max-height:100vh;
+cursor:pointer;
 }
 
-.nombre{
-position:absolute;
-bottom:20%;
-left:50%;
-transform:translateX(-50%);
-font-size:40px;
-color:white;
-font-family:sans-serif;
-cursor:pointer;
-text-decoration:underline;
-}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<img id="foto" src="home.jpg" onclick="cambiarImagen()">
 
-<img src="imagen1.jpg">
+<script>
 
-<a href="imagen2.jpg" class="nombre">
-Erick Alcántara Ibarra
-</a>
+let estado = 1;
 
-</div>
+function cambiarImagen(){
+
+if(estado === 1){
+document.getElementById("foto").src = "perfil.jpg";
+estado = 2;
+}else{
+document.getElementById("foto").src = "home.jpg";
+estado = 1;
+}
+
+}
+
+</script>
 
 </body>
 </html>
